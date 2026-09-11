@@ -63,7 +63,7 @@ const FOCUS = [
 ];
 
 const FACTS = [
-  "📍 Toshkent, O'zbekiston",
+  "📍 Toshkent, Uzbekiston",
   "🎯 Web Pentester",
   "💻 Kali Linux User",
   "🌐 Uzbek",
