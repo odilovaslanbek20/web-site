@@ -39,7 +39,7 @@ export default function Education() {
             HAAD TC — Kiberxavfsizlik
           </div>
           <div className="text-[10.5px] text-ink-faint mt-[6px]">
-            Hozirda Kiberxavfsizlik (Cyber Security) yo&apos;nalishida tahsil olmoqda
+            Red Hat Security RED-0 kursini muvafaqiyatli tamomlagan.
           </div>
         </div>
       </div>

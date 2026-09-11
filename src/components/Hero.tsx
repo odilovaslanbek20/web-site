@@ -21,7 +21,7 @@ export default function Hero() {
           <p className="mt-[18px] text-brand-green text-[15px] font-medium tracking-[0.3px] leading-[1.6]">
             Front-end Developer | Tizim va Tarmoq
             <br />
-            Administratori | Pentester
+            Administratori | Web Pentester
           </p>
 
           <p className="mt-[18px] text-ink-dim text-[13.5px] leading-[1.9] max-w-[480px]">
@@ -89,7 +89,7 @@ export default function Hero() {
                 Name: <b className="text-ink font-medium">Odilov Aslanbek</b>
               </div>
               <div className="text-ink-dim">
-                Role: <b className="text-ink font-medium">Developer | Admin | Pentester</b>
+                Role: <b className="text-ink font-medium">Developer | Admin | Web Pentester</b>
               </div>
               <div className="text-ink-dim">
                 Location: <b className="text-ink font-medium">Toshkent, Uzbekistan</b>

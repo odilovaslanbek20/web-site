@@ -109,7 +109,7 @@ export default function FeaturedProjects() {
         }
         action={
           <a
-            href="#"
+            href="/projects"
             className="flex items-center gap-[6px] text-[11px] text-ink-dim border border-border-soft px-[14px] py-2 rounded-md transition-all hover:text-brand-green hover:border-brand-greenDim"
           >
             VIEW ALL PROJECTS →
@@ -132,7 +132,7 @@ export default function FeaturedProjects() {
                 <span className="text-[9.5px] border border-border text-ink-faint px-2 py-1 rounded">
                   {p.tag}
                 </span>
-                <a href="#" className="text-[11px] text-ink flex items-center gap-1 transition-colors hover:text-brand-green">
+                <a href="/projects" className="text-[11px] text-ink flex items-center gap-1 transition-colors hover:text-brand-green">
                   {p.linkLabel}
                 </a>
               </div>

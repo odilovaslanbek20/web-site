@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Space_Grotesk } from "next/font/google";
+
 import "./globals.css";
+
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import Contact from "@/components/Contact";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -17,7 +22,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Odilov Aslanbek — Front-end Developer | Pentester",
+  title: "Odilov Aslanbek — Web Pentester | Front-end Developer",
   description:
     "Odilov Aslanbek — Front-end Developer, Tizim va Tarmoq Administratori, Pentester. Toshkent, O'zbekiston.",
 };
@@ -28,8 +33,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="uz" className={`${jetbrainsMono.variable} ${spaceGrotesk.variable}`}>
-      <body className="font-mono bg-bg text-ink antialiased">{children}</body>
+    <html
+      lang="uz"
+      className={`${jetbrainsMono.variable} ${spaceGrotesk.variable}`}
+    >
+      <body className="font-mono bg-bg text-ink antialiased">
+        <Header />
+
+        {children}
+
+        <Footer />
+      </body>
     </html>
   );
 }

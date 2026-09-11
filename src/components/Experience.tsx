@@ -25,7 +25,7 @@ export default function Experience() {
           Frilanser / Startap loyihalari ishtirokchisi
         </div>
         <div className="text-[10.5px] text-ink-faint ml-4 mt-[6px] mb-[14px]">
-          2023 - Hozirgi vaqtgacha
+          2025 - Hozirgi vaqtgacha
         </div>
         <ul className="ml-4 flex flex-col gap-[10px]">
           {ACHIEVEMENTS.map((item) => (

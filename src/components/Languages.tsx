@@ -2,7 +2,6 @@ import PanelHeader from "./PanelHeader";
 
 const LANGUAGES = [
   { name: "O'zbek tili", sub: "(Ona tili)", value: 100, dim: false },
-  { name: "Ingliz tili", sub: "(Elementary)", value: 40, dim: true },
 ];
 
 export default function Languages() {

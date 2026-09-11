@@ -3,12 +3,10 @@
 import { useEffect, useState } from "react";
 
 const NAV_LINKS = [
-  { href: "#home", label: "HOME" },
-  { href: "#about", label: "ABOUT" },
-  { href: "#projects", label: "PROJECTS" },
-  { href: "#skills", label: "SKILLS" },
-  { href: "#tools", label: "TOOLS" },
-  { href: "#experience", label: "EXPERIENCE" },
+  { href: "/", label: "HOME" },
+  { href: "/about", label: "ABOUT" },
+  { href: "/projects", label: "PROJECTS" },
+  { href: "/skills", label: "SKILLS" },
   { href: "#contact", label: "CONTACT" },
 ];
 
@@ -39,9 +37,9 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-[100] bg-bg/85 backdrop-blur-md border-b border-border-soft">
       <div className="max-w-[1240px] mx-auto px-6 flex items-center justify-between h-16">
-        <div className="flex items-center gap-2 text-[16px] font-bold tracking-[0.5px]">
+        <a href="/" className="flex items-center gap-2 text-[16px] font-bold tracking-[0.5px]">
           <span className="text-brand-green font-bold">&gt;_</span> ASLANBEK
-        </div>
+        </a>
 
         <nav
           className={`
@@ -72,7 +70,7 @@ export default function Header() {
         <div className="flex items-center gap-[10px]">
           <a
             target="_blank"
-            href="/Odilov_Aslanbek_Cv.pdf.pdf"
+            href="/Resume.pdf"
             className="flex items-center gap-2 border border-brand-greenDim text-brand-green bg-brand-green/5 px-4 py-[9px] text-xs tracking-[0.5px] font-semibold rounded transition-all hover:bg-brand-green/10 hover:shadow-glow whitespace-nowrap"
           >
             <span className="hidden sm:inline">DOWNLOAD CV</span> ↓
