@@ -6,7 +6,12 @@ import PanelHeader from "./PanelHeader";
 const CONTACT_ITEMS = [
   {
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8}>
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={1.8}
+      >
         <path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z" />
         <circle cx="12" cy="10" r="2.5" />
       </svg>
@@ -15,25 +20,41 @@ const CONTACT_ITEMS = [
   },
   {
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8}>
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={1.8}
+      >
         <rect x="2" y="4" width="20" height="16" rx="2" />
         <path d="m2 7 10 6 10-6" />
       </svg>
     ),
     content: (
-      <a href="mailto:aslanbekodilov524@gmail.com" className="hover:text-brand-green transition-colors">
+      <a
+        href="mailto:aslanbekodilov524@gmail.com"
+        className="hover:text-brand-green transition-colors"
+      >
         aslanbekodilov524@gmail.com
       </a>
     ),
   },
   {
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8}>
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={1.8}
+      >
         <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .7 3a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.2-1.3a2 2 0 0 1 2.1-.5c1 .4 2 .6 3 .7a2 2 0 0 1 1.7 2Z" />
       </svg>
     ),
     content: (
-      <a href="tel:+998950689767" className="hover:text-brand-green transition-colors">
+      <a
+        href="tel:+998950689767"
+        className="hover:text-brand-green transition-colors"
+      >
         +998 95 068 97 67
       </a>
     ),
@@ -58,27 +79,78 @@ const CONTACT_ITEMS = [
 ];
 
 export default function Contact() {
-  const [sent, setSent] = useState(false);
+  const [sent, setSent] = useState<boolean>(false);
+  const [sending, setSending] = useState<boolean>(false);
+  const [error, setError] = useState<boolean>(false);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // Static demo: no backend wired up yet. Swap this for a real submit
-    // handler (API route, email service, etc.) when ready.
-    setSent(true);
+
+    if (sending) return;
+
+    setSending(true);
+    setSent(false);
+    setError(false);
+
     const form = e.currentTarget;
-    setTimeout(() => {
-      setSent(false);
+    const formData = new FormData(form);
+
+    const name = String(formData.get("name") || "").trim();
+    const email = String(formData.get("email") || "").trim();
+    const message = String(formData.get("message") || "").trim();
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to send message");
+      }
+
+      setSent(true);
       form.reset();
-    }, 2200);
+
+      setTimeout(() => {
+        setSent(false);
+      }, 2200);
+    } catch (error) {
+      console.error("Contact form error:", error);
+      setError(true);
+
+      setTimeout(() => {
+        setError(false);
+      }, 3000);
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1.4fr_0.9fr] gap-5 mt-10" id="contact">
+    <div
+      className="grid grid-cols-1 lg:grid-cols-[1.1fr_1.4fr_0.9fr] gap-5 mt-10"
+      id="contact"
+    >
       <div className="panel">
         <PanelHeader
           title="CONTACT ME"
           icon={
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8}>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={1.8}
+            >
               <rect x="2" y="4" width="20" height="16" rx="2" />
               <path d="m2 7 10 6 10-6" />
             </svg>
@@ -86,7 +158,10 @@ export default function Contact() {
         />
         <div className="flex flex-col gap-[18px] mt-1.5">
           {CONTACT_ITEMS.map((item, i) => (
-            <div key={i} className="flex items-start gap-3 text-[11.5px] text-ink-dim">
+            <div
+              key={i}
+              className="flex items-start gap-3 text-[11.5px] text-ink-dim"
+            >
               <span className="text-brand-green flex-shrink-0 mt-px [&>svg]:w-[15px] [&>svg]:h-[15px]">
                 {item.icon}
               </span>
@@ -100,17 +175,22 @@ export default function Contact() {
         <form onSubmit={handleSubmit}>
           <input
             type="text"
+            name="name"
             placeholder="Your Name"
             required
             className="w-full bg-white/[0.02] border border-border-soft rounded px-[14px] py-3 text-ink text-xs mb-3 placeholder:text-ink-faint focus:outline-none focus:border-brand-greenDim transition-colors"
           />
+
           <input
             type="email"
+            name="email"
             placeholder="Your Email"
             required
             className="w-full bg-white/[0.02] border border-border-soft rounded px-[14px] py-3 text-ink text-xs mb-3 placeholder:text-ink-faint focus:outline-none focus:border-brand-greenDim transition-colors"
           />
+
           <textarea
+            name="message"
             placeholder="Your Message"
             required
             rows={4}
@@ -118,12 +198,24 @@ export default function Contact() {
           />
           <button
             type="submit"
-            className="w-full bg-brand-green text-[#04130a] border-none rounded px-[13px] py-[13px] text-xs font-bold tracking-[0.6px] flex items-center justify-center gap-2 transition-all hover:shadow-glowLg"
+            disabled={sending}
+            className="w-full bg-brand-green text-[#04130a] border-none rounded px-[13px] py-[13px] text-xs font-bold tracking-[0.6px] flex items-center justify-center gap-2 transition-all hover:shadow-glowLg disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            {sent ? "YUBORILDI ✓" : (
+            {sending ? (
+              "YUBORILMOQDA..."
+            ) : sent ? (
+              "YUBORILDI ✓"
+            ) : error ? (
+              "XATOLIK ✕"
+            ) : (
               <>
                 SEND MESSAGE
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
                   <path d="m2 21 21-9L2 3v7l15 2-15 2v7Z" />
                 </svg>
               </>

@@ -9,6 +9,7 @@ type Project = {
   linkLabel: string;
   thumbBg: string;
   thumb: React.ReactNode;
+  link: string;
 };
 
 const PROJECTS: Project[] = [
@@ -54,6 +55,7 @@ const PROJECTS: Project[] = [
         </text>
       </svg>
     ),
+    link: "https://eco-bozor-web.vercel.app/",
   },
   {
     title: "BookShop",
@@ -97,6 +99,7 @@ const PROJECTS: Project[] = [
         </text>
       </svg>
     ),
+    link: "https://book-shop-livid.vercel.app/",
   },
   {
   title: "NoName",
@@ -106,6 +109,7 @@ const PROJECTS: Project[] = [
   linkLabel: "View Report →",
   thumbBg: "linear-gradient(135deg,#0a1410,#06100a)",
   thumb: <CyberThumb title="NoName" />,
+  link: "https://github.com/odilovaslanbek20/Reports/blob/main/Machine_reports_month_1/NO_NAME_OFFSEC.pdf",
 },
 {
   title: "CyberSploit1",
@@ -115,6 +119,7 @@ const PROJECTS: Project[] = [
   linkLabel: "View Report →",
   thumbBg: "linear-gradient(135deg,#0a1410,#06100a)",
   thumb: <CyberThumb title="CyberSploit1" />,
+  link: "https://github.com/odilovaslanbek20/Reports/blob/main/Machine_reports_month_1/CyberSploit1__offsec.pdf",
 },
 {
   title: "Reflection",
@@ -124,6 +129,7 @@ const PROJECTS: Project[] = [
   linkLabel: "View Report →",
   thumbBg: "linear-gradient(135deg,#0a1410,#06100a)",
   thumb: <CyberThumb title="Reflection" />,
+  link: "https://github.com/odilovaslanbek20/Reports/blob/main/Machine_reports_month_1/Reflection_dockerlabs.pdf",
 },
 {
   title: "Injection",
@@ -133,6 +139,7 @@ const PROJECTS: Project[] = [
   linkLabel: "View Report →",
   thumbBg: "linear-gradient(135deg,#0a1410,#06100a)",
   thumb: <CyberThumb title="Injection" />,
+  link: "https://github.com/odilovaslanbek20/Reports/blob/main/Machine_reports_month_1/Injection_dockerlabs.pdf",
 },
 {
   title: "ApiBase",
@@ -142,6 +149,7 @@ const PROJECTS: Project[] = [
   linkLabel: "View Report →",
   thumbBg: "linear-gradient(135deg,#0a1410,#06100a)",
   thumb: <CyberThumb title="ApiBase" />,
+  link: "https://github.com/odilovaslanbek20/Reports/blob/main/Machine_reports_month_1/ApiBase_dockerlabs.pdf",
 },
 {
   title: "EXEC",
@@ -151,6 +159,7 @@ const PROJECTS: Project[] = [
   linkLabel: "View Report →",
   thumbBg: "linear-gradient(135deg,#0a1410,#06100a)",
   thumb: <CyberThumb title="EXEC" />,
+  link: "https://github.com/odilovaslanbek20/Reports/blob/main/Machine_reports_month_1/EXEC_vulnyx.pdf",
 },
 {
   title: "Diff3r3ntS3c",
@@ -160,6 +169,7 @@ const PROJECTS: Project[] = [
   linkLabel: "View Report →",
   thumbBg: "linear-gradient(135deg,#0a1410,#06100a)",
   thumb: <CyberThumb title="Diff3r3ntS3c" />,
+  link: "https://github.com/odilovaslanbek20/Reports/blob/main/Machine_reports_month_1/Diff3r3ntS3c_vulnyx.pdf",
 },
 {
   title: "ShowTime",
@@ -169,6 +179,7 @@ const PROJECTS: Project[] = [
   linkLabel: "View Report →",
   thumbBg: "linear-gradient(135deg,#0a1410,#06100a)",
   thumb: <CyberThumb title="ShowTime" />,
+  link: "https://github.com/odilovaslanbek20/Reports/blob/main/Machine_reports_month_1/ShowTime_dockerlabs.pdf",
 },
 {
   title: "Walking Dead",
@@ -178,6 +189,7 @@ const PROJECTS: Project[] = [
   linkLabel: "View Report →",
   thumbBg: "linear-gradient(135deg,#0a1410,#06100a)",
   thumb: <CyberThumb title="Walking Dead" />,
+  link: "https://github.com/odilovaslanbek20/Reports/blob/main/Machine_reports_month_1/Walking_Dead%E2%80%94dockerlabs.pdf",
 },
 {
   title: "Redirection",
@@ -187,6 +199,7 @@ const PROJECTS: Project[] = [
   linkLabel: "View Report →",
   thumbBg: "linear-gradient(135deg,#0a1410,#06100a)",
   thumb: <CyberThumb title="Redirection" />,
+  link: "https://github.com/odilovaslanbek20/Reports/blob/main/Machine_reports_month_1/Redirection%E2%80%94dockerlabs.pdf",
 },
 {
   title: "Grooti",
@@ -196,6 +209,7 @@ const PROJECTS: Project[] = [
   linkLabel: "View Report →",
   thumbBg: "linear-gradient(135deg,#0a1410,#06100a)",
   thumb: <CyberThumb title="Grooti" />,
+  link: "https://github.com/odilovaslanbek20/Reports/blob/main/Machine_reports_month_1/Grooti__dockerlabs.pdf",
 },
 {
   title: "Inj3ct0rss",
@@ -205,6 +219,7 @@ const PROJECTS: Project[] = [
   linkLabel: "View Report →",
   thumbBg: "linear-gradient(135deg,#0a1410,#06100a)",
   thumb: <CyberThumb title="Inj3ct0rss" />,
+  link: "https://github.com/odilovaslanbek20/Reports/blob/main/Machine_reports_month_1/Inj3ct0rss__dockerlabs.pdf",
 },
 {
   title: "Internal",
@@ -214,6 +229,7 @@ const PROJECTS: Project[] = [
   linkLabel: "View Report →",
   thumbBg: "linear-gradient(135deg,#0a1410,#06100a)",
   thumb: <CyberThumb title="Internal" />,
+  link: "https://github.com/odilovaslanbek20/Reports/blob/main/Machine_reports_month_1/Internal__dockerlabs.pdf",
 },
 {
   title: "Zone",
@@ -223,6 +239,7 @@ const PROJECTS: Project[] = [
   linkLabel: "View Report →",
   thumbBg: "linear-gradient(135deg,#0a1410,#06100a)",
   thumb: <CyberThumb title="Zone" />,
+  link: "https://github.com/odilovaslanbek20/Reports/blob/main/Machine_reports_month_1/Zone__vulnyx.pdf",
 },
 {
   title: "PingCTF",
@@ -232,6 +249,7 @@ const PROJECTS: Project[] = [
   linkLabel: "View Report →",
   thumbBg: "linear-gradient(135deg,#0a1410,#06100a)",
   thumb: <CyberThumb title="PingCTF" />,
+  link: "https://github.com/odilovaslanbek20/Reports/blob/main/Machine_reports_month_1/PingCTF__dockerlabs.pdf",
 },
 {
   title: "Waffy",
@@ -241,6 +259,7 @@ const PROJECTS: Project[] = [
   linkLabel: "View Report →",
   thumbBg: "linear-gradient(135deg,#0a1410,#06100a)",
   thumb: <CyberThumb title="Waffy" />,
+  link: "https://github.com/odilovaslanbek20/Reports/blob/main/Machine_reports_month_1/Waffy__dockerlabs.pdf",
 },
 {
   title: "AnonymousPingu",
@@ -250,6 +269,7 @@ const PROJECTS: Project[] = [
   linkLabel: "View Report →",
   thumbBg: "linear-gradient(135deg,#0a1410,#06100a)",
   thumb: <CyberThumb title="AnonymousPingu" />,
+  link: "https://github.com/odilovaslanbek20/Reports/blob/main/Machine_reports_month_1/AnonymousPingu__dockerlabs.pdf",
 },
 {
   title: "File",
@@ -259,6 +279,7 @@ const PROJECTS: Project[] = [
   linkLabel: "View Report →",
   thumbBg: "linear-gradient(135deg,#0a1410,#06100a)",
   thumb: <CyberThumb title="File" />,
+  link: "https://github.com/odilovaslanbek20/Reports/blob/main/Machine_reports_month_1/File__dockerlabs.pdf",
 },
 {
   title: "Deploy",
@@ -268,6 +289,7 @@ const PROJECTS: Project[] = [
   linkLabel: "View Report →",
   thumbBg: "linear-gradient(135deg,#0a1410,#06100a)",
   thumb: <CyberThumb title="Deploy" />,
+  link: "https://github.com/odilovaslanbek20/Reports/blob/main/Machine_reports_month_1/Deploy__vulnyx.pdf",
 },
 {
   title: "SRV",
@@ -277,6 +299,7 @@ const PROJECTS: Project[] = [
   linkLabel: "View Report →",
   thumbBg: "linear-gradient(135deg,#0a1410,#06100a)",
   thumb: <CyberThumb title="SRV" />,
+  link: "https://github.com/odilovaslanbek20/Reports/blob/main/Machine_reports_month_1/SRV_-_VulNyx.pdf",
 },
 {
   title: "Blackperl",
@@ -286,6 +309,7 @@ const PROJECTS: Project[] = [
   linkLabel: "View Report →",
   thumbBg: "linear-gradient(135deg,#0a1410,#06100a)",
   thumb: <CyberThumb title="Blackperl" />,
+  link: "https://github.com/odilovaslanbek20/Reports/blob/main/Machine_reports_month_2/Blackperl_lms.pdf",
 },
 {
   title: "Celryn",
@@ -295,6 +319,7 @@ const PROJECTS: Project[] = [
   linkLabel: "View Report →",
   thumbBg: "linear-gradient(135deg,#0a1410,#06100a)",
   thumb: <CyberThumb title="Celryn" />,
+  link: "https://github.com/odilovaslanbek20/Reports/blob/main/Machine_reports_month_2/Celryn__lms.pdf",
 },
 {
   title: "Reactor",
@@ -304,6 +329,7 @@ const PROJECTS: Project[] = [
   linkLabel: "View Report →",
   thumbBg: "linear-gradient(135deg,#0a1410,#06100a)",
   thumb: <CyberThumb title="Reactor" />,
+  link: "https://github.com/odilovaslanbek20/Reports/blob/main/Machine_reports_month_2/Reactor%E2%80%94Hack_The_Box.pdf",
 },
 {
   title: "Pentester Lab XSS & MySQL",
@@ -313,6 +339,7 @@ const PROJECTS: Project[] = [
   linkLabel: "View Report →",
   thumbBg: "linear-gradient(135deg,#0a1410,#06100a)",
   thumb: <CyberThumb title="Pentester Lab XSS & MySQL" />,
+  link: "https://github.com/odilovaslanbek20/Reports/blob/main/Machine_reports_month_2/Pentester-lab-xss-and-mysql.pdf",
 },
 {
   title: "RickdiculouslyEasy",
@@ -322,6 +349,7 @@ const PROJECTS: Project[] = [
   linkLabel: "View Report →",
   thumbBg: "linear-gradient(135deg,#0a1410,#06100a)",
   thumb: <CyberThumb title="RickdiculouslyEasy" />,
+  link: "https://github.com/odilovaslanbek20/Reports/blob/main/Machine_reports_month_2/Rickdiculouslyeasy%E2%80%94VulnHub.pdf",
 },
 {
   title: "WalkingCMS",
@@ -331,6 +359,7 @@ const PROJECTS: Project[] = [
   linkLabel: "View Report →",
   thumbBg: "linear-gradient(135deg,#0a1410,#06100a)",
   thumb: <CyberThumb title="WalkingCMS" />,
+  link: "https://github.com/odilovaslanbek20/Reports/blob/main/Machine_reports_month_2/Walking_cms__Dockerlabs.pdf",
 },
 {
   title: "Me and My Girlfriend",
@@ -340,13 +369,14 @@ const PROJECTS: Project[] = [
   linkLabel: "View Report →",
   thumbBg: "linear-gradient(135deg,#0a1410,#06100a)",
   thumb: <CyberThumb title="Me and My Girlfriend" />,
+  link: "https://github.com/odilovaslanbek20/Reports/blob/main/Machine_reports_month_2/Me_and_my_girlfriend__VulnHub.pdf",
 },
 ];
 
 export default function FeaturedProjects() {
   return (
     <section className="max-w-[1240px] mx-auto px-[20px]" id="projects">
-      <div className="panel mt-6">
+      <div className="panel mt-6">projects
         <PanelHeader
           title="FEATURED PROJECTS"
           icon={
@@ -385,7 +415,8 @@ export default function FeaturedProjects() {
                     {p.tag}
                   </span>
                   <a
-                    href="/projects"
+                    href={p.link}
+                    target="_blank"
                     className="text-[11px] text-ink flex items-center gap-1 transition-colors hover:text-brand-green"
                   >
                     {p.linkLabel}

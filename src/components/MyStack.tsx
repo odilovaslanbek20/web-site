@@ -1,4 +1,6 @@
+import { TbBrandPowershell } from "react-icons/tb";
 import PanelHeader from "./PanelHeader";
+import { SiGnubash } from "react-icons/si";
 
 type StackItem = {
   label: string;
@@ -34,8 +36,20 @@ const STACK: StackItem[] = [
         <circle cx="12" cy="12" r="2.2" />
         <g fill="none" stroke="currentColor" strokeWidth={1}>
           <ellipse rx="10" ry="4.2" cx="12" cy="12" />
-          <ellipse rx="10" ry="4.2" cx="12" cy="12" transform="rotate(60 12 12)" />
-          <ellipse rx="10" ry="4.2" cx="12" cy="12" transform="rotate(120 12 12)" />
+          <ellipse
+            rx="10"
+            ry="4.2"
+            cx="12"
+            cy="12"
+            transform="rotate(60 12 12)"
+          />
+          <ellipse
+            rx="10"
+            ry="4.2"
+            cx="12"
+            cy="12"
+            transform="rotate(120 12 12)"
+          />
         </g>
       </svg>
     ),
@@ -72,6 +86,20 @@ const STACK: StackItem[] = [
         <path d="M0 3.4 9.8 2v9.4H0V3.4ZM11 1.9 24 0v11.4H11V1.9ZM0 12.6h9.8V22L0 20.5v-7.9Zm11 0h13V24l-13-1.8V12.6Z" />
       </svg>
     ),
+  },
+  {
+    label: "Bash",
+    bg: "#0d1117",
+    color: "#4caf50",
+    border: true,
+    content: <SiGnubash size={22} />,
+  },
+  {
+    label: "PowerShell",
+    bg: "#0d1117",
+    color: "#2196f3",
+    border: true,
+    content: <TbBrandPowershell size={22}/>,
   },
 ];
 
