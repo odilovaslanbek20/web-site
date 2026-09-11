@@ -25,6 +25,9 @@ export const metadata: Metadata = {
   title: "Odilov Aslanbek — Web Pentester | Front-end Developer",
   description:
     "Odilov Aslanbek — Front-end Developer, Tizim va Tarmoq Administratori, Pentester. Toshkent, O'zbekiston.",
+  icons: {
+    icon: "/download.jpeg",
+  }
 };
 
 export default function RootLayout({
