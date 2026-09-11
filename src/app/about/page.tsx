@@ -113,27 +113,27 @@ export default function AboutPage() {
             </p>
 
             <p className="text-ink-dim text-[13px] leading-[1.9]">
-              Men kiberxavfsizlik va web texnologiyalari yo'nalishida faoliyat
-              yuritaman. Asosiy e'tiborim web ilovalar xavfsizligini tahlil
+              Men kiberxavfsizlik va web texnologiyalari yo&apos;nalishida faoliyat
+              yuritaman. Asosiy e&apos;tiborim web ilovalar xavfsizligini tahlil
               qilish, zaifliklarni aniqlash hamda xavfsiz va ishonchli tizimlar
               yaratishga qaratilgan. Frontend dasturlash va tizim
-              administratsiyasi bo'yicha bilimlarim xavfsizlikka texnik va
+              administratsiyasi bo&apos;yicha bilimlarim xavfsizlikka texnik va
               amaliy nuqtai nazardan yondashishimga yordam beradi.
             </p>
 
             <p className="text-ink-dim text-[13px] leading-[1.9] mt-3">
               Hozirda web application security, API security, penetration
-              testing, Linux tizimlari va tarmoq infratuzilmasi bo'yicha amaliy
+              testing, Linux tizimlari va tarmoq infratuzilmasi bo&apos;yicha amaliy
               tajriba orttirib bormoqdaman. Turli laboratoriyalar, CTF
-              platformalari va real loyihalar orqali o'z ko'nikmalarimni
-              rivojlantirib, zamonaviy xavfsizlik muammolarini o'rganishga
+              platformalari va real loyihalar orqali o&apos;z ko&apos;nikmalarimni
+              rivojlantirib, zamonaviy xavfsizlik muammolarini o&apos;rganishga
               intilaman.
             </p>
 
             <p className="text-ink-dim text-[13px] leading-[1.9] mt-3">
               Maqsadim xalqaro darajadagi kiberxavfsizlik mutaxassisi sifatida
               rivojlanish, murakkab xavfsizlik loyihalarida ishtirok etish va
-              tashkilotlarga o'z tizimlarini yanada xavfsiz qilishda yordam
+              tashkilotlarga o&apos;z tizimlarini yanada xavfsiz qilishda yordam
               berishdir.
             </p>
           </div>
