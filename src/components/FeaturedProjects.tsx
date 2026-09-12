@@ -7,6 +7,7 @@ type Project = {
   linkLabel: string;
   thumbBg: string;
   thumb: React.ReactNode;
+  url: string;
 };
 
 const PROJECTS: Project[] = [
@@ -33,6 +34,7 @@ const PROJECTS: Project[] = [
         </text>
       </svg>
     ),
+    url: "https://eco-bozor-web.vercel.app/",
   },
   {
     title: "BookShop",
@@ -56,6 +58,7 @@ const PROJECTS: Project[] = [
         </text>
       </svg>
     ),
+    url: "https://book-shop-livid.vercel.app/",
   },
   {
     title: "Penetratsion Test Hisoboti — CyberSploit",
@@ -93,6 +96,7 @@ const PROJECTS: Project[] = [
         </text>
       </svg>
     ),
+    url: "https://github.com/odilovaslanbek20/Reports/blob/main/Machine_reports_month_1/CyberSploit1__offsec.pdf",
   },
 ];
 
@@ -132,7 +136,7 @@ export default function FeaturedProjects() {
                 <span className="text-[9.5px] border border-border text-ink-faint px-2 py-1 rounded">
                   {p.tag}
                 </span>
-                <a href="/projects" className="text-[11px] text-ink flex items-center gap-1 transition-colors hover:text-brand-green">
+                <a href={p.url} target="_blank" className="text-[11px] text-ink flex items-center gap-1 transition-colors hover:text-brand-green">
                   {p.linkLabel}
                 </a>
               </div>
