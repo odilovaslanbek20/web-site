@@ -8,7 +8,7 @@ const certificates = [
     issuer: "Najot Ta'lim",
     year: "2025",
     image: "/sertificat.png",
-    url: "/nt_sertificat.pdf",
+    url: "/certificate_nt.pdf",
   },
 ];
 
