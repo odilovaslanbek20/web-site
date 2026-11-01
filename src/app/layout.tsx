@@ -22,7 +22,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Odilov Aslanbek — Web Pentester | Front-end Developer",
+  title: "O.ASLANBEK — Red Teamer | Front-end Developer",
   description:
     "Odilov Aslanbek — Front-end Developer, Tizim va Tarmoq Administratori, Pentester. Toshkent, O'zbekiston.",
   icons: {

@@ -10,6 +10,13 @@ const certificates = [
     image: "/sertificat.png",
     url: "/certificate_nt.pdf",
   },
+  {
+    title: "(CWES) Certified Web Exploitation Specialist",
+    issuer: "Hack The Box - academy",
+    year: "2026",
+    image: "/cwes_certificate_phote.jpg",
+    url: "/HTB_CWES_certificate.pdf",
+  },
 ];
 
 export default function CertificatesPage() {
